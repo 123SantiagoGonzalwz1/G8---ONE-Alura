@@ -1,4 +1,33 @@
-function mostrarTablaDeMultiplicar(numero) {
+let listaGenerica = [];
+
+let lenguajesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+lenguajesDeProgramacion.push('Java', 'Ruby', 'GoLang');
+
+function mostrarLenguajesDeProgramacion() {
+    for (let i = 0; i < lenguajesDeProgramacion.length; i++) {
+        console.log(lenguajesDeProgramacion[i]);
+    }
+}
+mostrarLenguajesDeProgramacion();
+
+function mostrarLenguajesInvertidos() {
+    return console.log(lenguajesDeProgramacion.reverse());
+}
+mostrarLenguajesInvertidos();
+
+function calcularMedia(lista) {
+    let suma = 0;
+    for (let i = 0; i < lista.length; i++) {
+      suma += lista[i];
+    }
+    return suma / lista.length;
+}
+  
+let numeros = [10, 20, 30, 40, 50];
+let media = calcularMedia(numeros);
+console.log('Média:', media);
+
+/* function mostrarTablaDeMultiplicar(numero) {
     for (let i = 1; i <= 10; i++) {
         let resultado = numero * i;
         console.log(`${numero} x ${i} = ${resultado}`);
@@ -6,7 +35,7 @@ function mostrarTablaDeMultiplicar(numero) {
 }
 
 let numero = 7;
-mostrarTablaDeMultiplicar(numero);
+mostrarTablaDeMultiplicar(numero); */
 
 /* const PI = 3.14
 
@@ -72,27 +101,6 @@ let numero = 5;
 let resultado = calcularFactorial(numero);
 console.log(`El factorial de ${numero} es ${resultado}.`); */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* function mensajeConsola() {
     return console.log('¡Hola Mundo!');
 }
@@ -131,8 +139,6 @@ dobleDelNumero(30);
 promedioNumero(5, 2, 3);
 mensajeNombre('Santiago');
 mensajeConsola(); */
-
-
 
 /* let title = document.querySelector('h1');
 title.innerHTML = "Hora del desafío";
