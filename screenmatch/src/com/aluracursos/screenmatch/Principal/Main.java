@@ -1,17 +1,16 @@
-import com.aluracursos.screematch.models.Episodio;
-import com.aluracursos.screematch.models.FiltroRecomendacion;
-import com.aluracursos.screematch.models.Pelicula;
-import com.aluracursos.screematch.models.Serie;
+package com.aluracursos.screenmatch.Principal;
+
+import com.aluracursos.screenmatch.models.Episodio;
+import com.aluracursos.screenmatch.models.FiltroRecomendacion;
+import com.aluracursos.screenmatch.models.Pelicula;
+import com.aluracursos.screenmatch.models.Serie;
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-
-        miPelicula.setNombre("Encanto");
-        miPelicula.setFechaDeLanzamiento(2021);
+        Pelicula miPelicula = new Pelicula("Encanto", 2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
 
@@ -22,10 +21,7 @@ public class Main {
         System.out.println(miPelicula.getTotalDeLasEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie();
-
-        casaDragon.setNombre("La casa del dragón");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del dragón", 2022);
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
@@ -46,10 +42,8 @@ public class Main {
         episodio.setTotalVisualizaciones(300);
         filtroRecomendacion.filtrar(episodio);
 
-        var xMen = new Pelicula();
-        xMen.setNombre("X-MEN");
+        var xMen = new Pelicula("X-MEN", 2000);
         xMen.setDuracionEnMinutos(180);
-        xMen.setFechaDeLanzamiento(2000);
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(miPelicula);

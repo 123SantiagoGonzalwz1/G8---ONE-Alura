@@ -1,9 +1,13 @@
-package com.aluracursos.screematch.models;
+package com.aluracursos.screenmatch.models;
 
 import com.aluracursos.screenmatch.calculos.Clasificacion;
 
 public class Pelicula extends Titulo implements Clasificacion {
     private String director;
+
+    public Pelicula(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
+    }
 
     public String getDirector() {
         return director;

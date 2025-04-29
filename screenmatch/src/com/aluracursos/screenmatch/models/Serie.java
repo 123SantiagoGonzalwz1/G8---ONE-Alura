@@ -1,9 +1,13 @@
-package com.aluracursos.screematch.models;
+package com.aluracursos.screenmatch.models;
 
 public class Serie extends Titulo {
     private int temporadas;
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
+
+    public Serie(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
+    }
 
     @Override
     public int getDuracionEnMinutos() {
