@@ -95,5 +95,13 @@ public class Main {
                         Collectors.averagingDouble(Episodio::getEvalaucion)));
 
         System.out.println(evaluacionesPorTemporada);
+
+        // Generar Estadísticas
+        DoubleSummaryStatistics est = episodios.stream()
+                .filter(e -> e.getEvalaucion() > 0.0)
+                .collect(Collectors.summarizingDouble(Episodio::getEvalaucion));
+        System.out.println("Media de las evaluaciones: " + est.getAverage());
+        System.out.println("Episodio mejor evaluado: " + est.getMax());
+        System.out.println("Episodio peor evaluado: " + est.getMin());
     }
 }
