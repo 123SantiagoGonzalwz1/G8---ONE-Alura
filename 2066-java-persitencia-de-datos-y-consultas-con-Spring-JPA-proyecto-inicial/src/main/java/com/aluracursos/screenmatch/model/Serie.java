@@ -22,7 +22,7 @@ public class Serie {
     private String actores;
     private String sinopsis;
 
-    @Transient
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL)
     private List<Episodio> episodios;
 
     public Serie() {}
@@ -99,6 +99,14 @@ public class Serie {
 
     public void setSinopsis(String sinopsis) {
         this.sinopsis = sinopsis;
+    }
+
+    public List<Episodio> getEpisodios() {
+        return episodios;
+    }
+
+    public void setEpisodios(List<Episodio> episodios) {
+        this.episodios = episodios;
     }
 
     @Override
