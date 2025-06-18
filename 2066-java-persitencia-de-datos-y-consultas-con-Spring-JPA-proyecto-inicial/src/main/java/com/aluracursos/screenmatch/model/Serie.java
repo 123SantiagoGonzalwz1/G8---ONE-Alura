@@ -1,5 +1,6 @@
 package com.aluracursos.screenmatch.model;
 
+import com.aluracursos.screenmatch.service.ConsultaGemini;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import jakarta.persistence.*;
 
@@ -109,6 +110,14 @@ public class Serie {
         episodios.forEach(e -> e.setSerie(this));
         this.episodios = episodios;
     }
+
+    public void traducirSinopsis() {
+        String traduccion = ConsultaGemini.obtenerTraduccion(this.sinopsis);
+        if (traduccion != null) {
+            this.sinopsis = traduccion;
+        }
+    }
+
 
     @Override
     public String toString() {
