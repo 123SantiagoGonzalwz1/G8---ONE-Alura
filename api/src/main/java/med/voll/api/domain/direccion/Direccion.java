@@ -51,4 +51,16 @@ public class Direccion {
             this.estado = datos.estado();
         }
     }
+
+    public Direccion actualizarDatos(DatosDireccion direccion) {
+        this.calle = direccion.calle();
+        this.numero = direccion.numero();
+        this.complemento = direccion.complemento();
+        this.barrio = direccion.barrio();
+        this.ciudad = direccion.ciudad();
+        this.codigo_postal = direccion.codigo_postal();
+        this.estado = direccion.estado();
+
+        return this;
+    }
 }
