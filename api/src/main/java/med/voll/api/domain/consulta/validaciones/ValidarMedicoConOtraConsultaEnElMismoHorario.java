@@ -3,8 +3,13 @@ package med.voll.api.domain.consulta.validaciones;
 import med.voll.api.domain.ValidacionException;
 import med.voll.api.domain.consulta.DatosReservaConsulta;
 import med.voll.api.domain.consulta.IConsultaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class ValidarMedicoConOtraConsultaEnElMismoHorario {
+@Component
+public class ValidarMedicoConOtraConsultaEnElMismoHorario implements IValidadorDeConsultas {
+
+    @Autowired
     private IConsultaRepository repository;
 
     public void validar(DatosReservaConsulta datos) {
