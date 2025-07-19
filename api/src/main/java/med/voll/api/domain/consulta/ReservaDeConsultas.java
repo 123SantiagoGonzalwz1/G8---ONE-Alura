@@ -1,7 +1,7 @@
 package med.voll.api.domain.consulta;
 
 import med.voll.api.domain.ValidacionException;
-import med.voll.api.domain.consulta.validaciones.IValidadorDeConsultas;
+import med.voll.api.domain.consulta.validaciones.reserva.IValidadorDeConsultas;
 import med.voll.api.domain.medico.IMedicoRepository;
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.paciente.PacienteRepository;
@@ -24,6 +24,7 @@ public class ReservaDeConsultas {
 
     @Autowired
     private List<IValidadorDeConsultas> validaciones;
+
 
     public DatosDetalleConsulta reservar(DatosReservaConsulta datos){
 
@@ -60,4 +61,5 @@ public class ReservaDeConsultas {
 
         return medicoRepository.elegirMedicoAleatorioDisponibleEnLaFecha(datos.especialidad(), datos.fecha());
     }
+
 }

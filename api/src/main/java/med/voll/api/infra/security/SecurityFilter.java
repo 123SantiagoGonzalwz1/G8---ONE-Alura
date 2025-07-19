@@ -18,7 +18,6 @@ public class SecurityFilter extends OncePerRequestFilter {
     @Autowired
     private IUsuarioRepository repository;
 
-
     @Autowired
     private TokenService tokenService;
 

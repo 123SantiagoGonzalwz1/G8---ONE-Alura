@@ -6,8 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.domain.direccion.Direccion;
-import med.voll.api.domain.medico.Especialidad;
-import med.voll.api.domain.medico.Medico;
 
 import java.util.Objects;
 
